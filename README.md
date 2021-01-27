@@ -155,5 +155,6 @@ router.post('/', async function(req, res, next) {
         next(err)
     }
 })
+</code></pre>
 
 나머지 put, delete, get도 같은 형식으로 축소하였고 get에서는 사실상 beginTransaction 자체가 필요하지 않기 때문에 getConnection이라는 모듈을 추가로 만들어서 사용하였다.
