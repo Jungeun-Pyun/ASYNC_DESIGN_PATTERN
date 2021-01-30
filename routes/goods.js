@@ -6,8 +6,9 @@ const model = require('../models/goods')
 router.post('/', async function(req, res, next) {
     const body = req.body
     // console.log('body : ', body)
-    const connection = await db.beginTransaction() //await이 있으면 무조건 async 들어가야함
+    //await이 있으면 무조건 async 들어가야함
     try {
+        const connection = await db.beginTransaction()
         const result = await model.insert(connection, body)
         await db.commit(connection)
         res.status(200).json({result})
@@ -35,8 +36,8 @@ router.post('/', async function(req, res, next) {
   router.delete('/', async function(req, res, next) {
     const body = req.body
     // console.log('body : ', body)
-    const connection = await db.beginTransaction()
     try {
+        const connection = await db.beginTransaction()
         const result = await model.delete(connection, body)
         await db.commit(connection)
         res.status(200).json({result})
