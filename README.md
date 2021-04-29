@@ -243,7 +243,10 @@ module.exports.commit = (connection) => {
 }
 ```
 
-* * *
+<br></br>
+***
+
+### 📌  쿼리문 사용
 
 이제 위 함수들을 가지고 goods.js 파일 내의 method를 수정할 수 있다. 하지만 한가지 더 모듈화할 수 있는것이 있는데 바로 query문이다.
 
