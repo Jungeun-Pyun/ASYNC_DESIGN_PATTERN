@@ -284,7 +284,10 @@ module.exports.getList = async (connection, options) => {
 
 나머지 쿼리문 역시 같은 방식으로 모듈화 할 수 있다.
 
-* * *
+<br></br>
+***
+
+### 📌  try catch
 
 이제 이렇게 만들어준 모듈들을 goods.js에서 사용할 수 있다. 이때 try catch 문이 필요하다. try{} 안에서 동작하는 함수들에 에러가 발생한다면 catch{} 안에서 해당 에러를 핸들링 하는 형태인데 본 코드에선 아직 에러를 핸들링하는게 없기 때문에 next(err)로 넘겨주겠다.
 
